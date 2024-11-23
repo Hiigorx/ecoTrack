@@ -70,10 +70,8 @@ function Admin() {
     if (!confirmar) return;
 
     try {
-   
       await deleteDoc(doc(db, 'usuarios', selectedUsuario));
 
-    
       const usuarioDocRef = doc(db, 'usuarios', selectedUsuario);
       const usuarioDoc = await getDoc(usuarioDocRef);
       if (usuarioDoc.exists()) {
@@ -107,14 +105,12 @@ function Admin() {
         Gerenciamento de Moradores
       </h1>
 
-
       <form
         onSubmit={handleAlterarCargo}
         className="w-full max-w-lg bg-white p-6 rounded-lg shadow-lg space-y-6"
       >
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Alterar Cargo</h2>
 
-    
         <div className="space-y-2">
           <label htmlFor="usuario" className="text-lg font-medium text-gray-700">
             Usuário
@@ -134,7 +130,6 @@ function Admin() {
           </select>
         </div>
 
-     
         <div className="space-y-2">
           <label htmlFor="cargo" className="text-lg font-medium text-gray-700">
             Novo Cargo
@@ -151,7 +146,6 @@ function Admin() {
           </select>
         </div>
 
-   
         <button
           type="submit"
           className="w-full bg-green-600 text-white py-2 rounded-lg mt-4 hover:bg-green-700 transition-all duration-300"
@@ -160,7 +154,6 @@ function Admin() {
         </button>
       </form>
 
- 
       {selectedUsuario && (
         <button
           onClick={handleExcluirMorador}
@@ -169,7 +162,6 @@ function Admin() {
           Excluir Morador
         </button>
       )}
-
 
       {selectedUsuario && consumos.length > 0 && (
         <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg mt-8">

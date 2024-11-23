@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD9VUp7jsxfj0NnDv3JkN9RcVIFZnEEl4c",
-    authDomain: "ecotrack-f19db.firebaseapp.com",
-    projectId: "ecotrack-f19db",
-    storageBucket: "ecotrack-f19db.firebasestorage.app",
-    messagingSenderId: "873268483863",
-    appId: "1:873268483863:web:47281dca90b5c9f9204952",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
   };
 
 
