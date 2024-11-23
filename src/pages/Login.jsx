@@ -111,7 +111,7 @@ function translateFirebaseError(errorCode) {
     'auth/insufficient-permission': 'A credencial utilizada não tem permissão para acessar o recurso solicitado.',
     'auth/internal-error': 'O servidor de autenticação encontrou um erro inesperado ao tentar processar a solicitação.',
   };
-  return errorMessages[errorCode];
+  return errorMessages[errorCode] || "Ocorreu um erro desconhecido.";
 }
 
 function Login() {
